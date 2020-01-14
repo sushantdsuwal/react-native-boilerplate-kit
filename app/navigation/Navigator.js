@@ -1,10 +1,5 @@
 import * as React from 'react';
-import {
-  NavigationNativeContainer,
-  DefaultTheme,
-  DarkTheme,
-} from '@react-navigation/native';
-import {createStackNavigator, HeaderTitle} from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {
@@ -94,23 +89,8 @@ const MainTabNavigator = () => {
   );
 };
 
-const MyTheme = {
-  dark: false,
-  colors: {
-    primary: 'rgb(255, 45, 85)',
-    background: 'rgb(242, 242, 242)',
-    card: 'rgb(255, 255, 255)',
-    text: 'rgb(28, 28, 30)',
-    border: 'rgb(199, 199, 204)',
-  },
-};
-
 const Navigator = () => {
-  return (
-    <NavigationNativeContainer theme={MyTheme}>
-      <MainTabNavigator />
-    </NavigationNativeContainer>
-  );
+  return <MainTabNavigator />;
 };
 
 export default Navigator;
