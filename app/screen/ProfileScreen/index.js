@@ -3,13 +3,9 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Switch} from 'react-native-gesture-handler';
 import {useTheme} from '../../theme/ManageThemeContext';
-// import {ThemeColors} from 'react-navigation';
 
 const ProfileScreen = () => {
   const theme = useTheme();
-
-  console.log('theme', theme);
-
   return (
     <View style={styles.container}>
       <Switch

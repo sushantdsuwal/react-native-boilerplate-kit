@@ -36,7 +36,7 @@ const MainApp = () => {
       value={{
         mode: themeState,
         setMode,
-        activeTheme: themeState === 'dark' ? darkTheme : lightTheme,
+        active: themeState === 'dark' ? darkTheme : lightTheme,
       }}>
       <AppearanceProvider>
         <NavigationNativeContainer

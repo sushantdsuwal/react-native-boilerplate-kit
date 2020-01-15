@@ -10,7 +10,7 @@ export const defaultMode = Appearance.getColorScheme() || 'light';
 const ManageThemeContext = React.createContext({
   mode: defaultMode,
   setMode: mode => console.log(mode),
-  activeTheme: defaultMode ? lightTheme : darkTheme,
+  active: defaultMode ? lightTheme : darkTheme,
 });
 
 export const useTheme = () => React.useContext(ManageThemeContext);
