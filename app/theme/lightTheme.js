@@ -1,6 +1,4 @@
-import {} from '@react-navigation/native';
-
-const MyTheme = {
+const lightTheme = {
   dark: false,
   colors: {
     primary: 'rgb(255, 45, 85)',
@@ -11,4 +9,4 @@ const MyTheme = {
   },
 };
 
-export default MyTheme;
+export default lightTheme;

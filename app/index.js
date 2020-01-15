@@ -7,7 +7,7 @@ import {enableScreens} from 'react-native-screens';
 import {NavigationNativeContainer} from '@react-navigation/native';
 import {AppearanceProvider, Appearance} from 'react-native-appearance';
 import {darkTheme, lightTheme} from './theme';
-import {ManageThemeContext, defaultMode} from './context/ThemeContext';
+import ManageThemeContext, {defaultMode} from './theme/ManageThemeContext';
 
 enableScreens();
 Ionicons.loadFont();
@@ -32,7 +32,12 @@ const MainApp = () => {
   // sets the status bar color, and injects the current mode and a function to change it
   return (
     // Create the Provider
-    <ManageThemeContext.Provider value={{mode: themeState, setMode}}>
+    <ManageThemeContext.Provider
+      value={{
+        mode: themeState,
+        setMode,
+        activeTheme: themeState === 'dark' ? darkTheme : lightTheme,
+      }}>
       <AppearanceProvider>
         <NavigationNativeContainer
           theme={themeState === 'dark' ? darkTheme : lightTheme}>
