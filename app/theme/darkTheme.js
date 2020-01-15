@@ -1,5 +1,3 @@
-import {DarkTheme} from '@react-navigation/native';
-
 const darkTheme = {
   dark: true,
   colors: {
@@ -11,7 +9,5 @@ const darkTheme = {
     border: 'rgb(39, 39, 41)',
   },
 };
-
-console.log('DarkTheme)', DarkTheme);
 
 export default darkTheme;

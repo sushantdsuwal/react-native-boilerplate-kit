@@ -8,6 +8,7 @@ import {NavigationNativeContainer} from '@react-navigation/native';
 import {AppearanceProvider, Appearance} from 'react-native-appearance';
 import {darkTheme, lightTheme} from './theme';
 import ManageThemeContext, {defaultMode} from './theme/ManageThemeContext';
+import typography from './theme/typography';
 
 enableScreens();
 Ionicons.loadFont();
@@ -37,6 +38,7 @@ const MainApp = () => {
         mode: themeState,
         setMode,
         active: themeState === 'dark' ? darkTheme : lightTheme,
+        typography: typography(themeState === 'dark' ? darkTheme : lightTheme),
       }}>
       <AppearanceProvider>
         <NavigationNativeContainer

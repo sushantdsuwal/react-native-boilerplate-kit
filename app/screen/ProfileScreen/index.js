@@ -1,8 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {Switch} from 'react-native-gesture-handler';
 import {useTheme} from '../../theme/ManageThemeContext';
+import {Text} from '../../components';
 
 const ProfileScreen = () => {
   const theme = useTheme();
@@ -12,7 +13,7 @@ const ProfileScreen = () => {
         value={theme.mode === 'dark'}
         onValueChange={value => theme.setMode(value ? 'dark' : 'light')}
       />
-      <Text style={{color: 'red', margin: 20}}>
+      <Text style={{margin: 20}} bold>
         Active Theme {theme.mode} Mode
       </Text>
     </View>

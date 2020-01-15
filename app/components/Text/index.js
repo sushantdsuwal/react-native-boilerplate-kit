@@ -1,12 +1,7 @@
 import React from 'react';
 import {Text as RNText, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
-import {useTheme} from '@react-navigation/native';
-
-const fontFamily = 'sans-serif';
-const fontWeightRegular = 'normal';
-const fontWeightSemiBold = '600';
-const fontWeightBold = 'bold';
+import {useTheme} from '../../theme/ManageThemeContext';
 
 // Possible value for prop "type" for Text
 const HEADING = 'heading';
@@ -44,45 +39,39 @@ const Text = ({
   ...props
 }) => {
   const theme = useTheme();
-
   return (
     <RNText
-      style={StyleSheet.flatten([styles.text(type, bold, theme), style])}
+      style={StyleSheet.flatten([
+        styles.text(type, bold, theme.typography),
+        style,
+      ])}
       {...props}
     />
   );
 };
 
 const getTextStyle = (type, bold, theme) => {
-  let style = '';
+  let style = {};
   switch (type) {
     case HEADING:
-      style = {
-        headingText: {
-          fontFamily,
-          color: theme.text,
-          fontSize: 18,
-          fontStyle: 'normal',
-          fontWeight: fontWeightRegular,
-        },
-      };
+      style = theme.headingText;
       break;
     case SUB_HEADING:
-      style = 'subheadingText';
+      style = theme.subheadingText;
       break;
     case LABEL:
-      style = 'labelText';
+      style = theme.labelText;
       break;
     case CAPTION:
-      style = 'captionText';
+      style = theme.captionText;
       break;
     default:
-      style = 'bodyText';
+      style = theme.bodyText;
   }
   if (bold) {
-    style += 'Bold';
+    style = {...style, fontWeight: '900'};
   }
-  return theme.typography[style];
+  return style;
 };
 
 const styles = {
