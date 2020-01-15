@@ -1,10 +1,7 @@
-// const fontFamily = 'sans-serif';
+const fontFamily = 'sans-serif';
 const fontWeightRegular = 'normal';
 const fontWeightSemiBold = '600';
 const fontWeightBold = 'bold';
-
-// const activeTheme = useTheme();
-// const theme = activeTheme.active;
 
 const typography = theme => ({
   /**

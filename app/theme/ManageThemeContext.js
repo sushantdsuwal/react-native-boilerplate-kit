@@ -3,6 +3,8 @@ import {Appearance} from 'react-native-appearance';
 import lightTheme from './lightTheme';
 import darkTheme from './darkTheme';
 import typography from './typography';
+import spacing from './spacing';
+import dimensions from './dimensions';
 
 // Get OS default mode or default to 'light'
 export const defaultMode = Appearance.getColorScheme() || 'light';
@@ -13,6 +15,8 @@ const ManageThemeContext = React.createContext({
   setMode: mode => console.log(mode),
   active: defaultMode ? lightTheme : darkTheme,
   typography: typography(defaultMode ? lightTheme : darkTheme),
+  spacing,
+  dimensions,
 });
 
 export const useTheme = () => React.useContext(ManageThemeContext);

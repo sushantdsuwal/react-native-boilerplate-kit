@@ -6,9 +6,14 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {enableScreens} from 'react-native-screens';
 import {NavigationNativeContainer} from '@react-navigation/native';
 import {AppearanceProvider, Appearance} from 'react-native-appearance';
-import {darkTheme, lightTheme} from './theme';
 import ManageThemeContext, {defaultMode} from './theme/ManageThemeContext';
-import typography from './theme/typography';
+import {
+  darkTheme,
+  lightTheme,
+  spacing,
+  dimensions,
+  typography,
+} from './theme/theme';
 
 enableScreens();
 Ionicons.loadFont();
@@ -39,6 +44,8 @@ const MainApp = () => {
         setMode,
         active: themeState === 'dark' ? darkTheme : lightTheme,
         typography: typography(themeState === 'dark' ? darkTheme : lightTheme),
+        spacing,
+        dimensions,
       }}>
       <AppearanceProvider>
         <NavigationNativeContainer
