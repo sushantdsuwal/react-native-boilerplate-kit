@@ -1,13 +1,21 @@
 import React from 'react';
-import {View, Text, Button, StyleSheet} from 'react-native';
+import {View, Button, StyleSheet} from 'react-native';
 import {NAVIGATION_PRODUCT_REPOSITORY_SCREEN} from '../../navigation/routes';
+import {Spinner} from '../../components';
+import {Text} from '../../components';
 
 const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text style={{color: 'red', margin: 20}}>
-        Switch to change theme mode
+      <Text type="heading" bold>
+        Text Heading with bold
       </Text>
+      <Text type="subheading">Text Sub Heading</Text>
+      <Text type="body">Text Body</Text>
+      <Text type="label">Text Label</Text>
+      <Text type="caption">Text caption</Text>
+      <Text />
+      <Spinner />
 
       <Button
         title="go to feed screen"
@@ -17,6 +25,7 @@ const HomeScreen = ({navigation}) => {
           })
         }
       />
+      <Text bold>You can Change theme pallate in profile tab</Text>
     </View>
   );
 };

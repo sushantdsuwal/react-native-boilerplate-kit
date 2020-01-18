@@ -13,11 +13,13 @@ export const defaultMode = Appearance.getColorScheme() || 'light';
 const ManageThemeContext = React.createContext({
   mode: defaultMode,
   setMode: mode => console.log(mode),
-  active: defaultMode ? lightTheme : darkTheme,
-  typography: typography(defaultMode ? lightTheme : darkTheme),
+  colors: defaultMode ? lightTheme.colors : darkTheme.colors,
+  typography: typography(defaultMode ? lightTheme.colors : lightTheme.colors),
   spacing,
   dimensions,
 });
+
+// hooks
 
 export const useTheme = () => React.useContext(ManageThemeContext);
 

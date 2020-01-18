@@ -3,20 +3,20 @@ const fontWeightRegular = 'normal';
 const fontWeightSemiBold = '600';
 const fontWeightBold = 'bold';
 
-const typography = theme => ({
+const typography = colors => ({
   /**
    * Title is reserved for the title of a screen(Toolbar) and the titles of Modal dialogs.
    */
   titleText: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 20,
     fontStyle: 'normal',
     fontWeight: fontWeightRegular,
   },
   titleTextBold: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 20,
     fontStyle: 'normal',
     fontWeight: fontWeightBold,
@@ -26,14 +26,14 @@ const typography = theme => ({
    */
   headingText: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 18,
     fontStyle: 'normal',
     fontWeight: fontWeightRegular,
   },
   headingTextBold: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 18,
     fontStyle: 'normal',
     fontWeight: fontWeightBold,
@@ -43,14 +43,14 @@ const typography = theme => ({
    */
   subheadingText: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 16,
     fontStyle: 'normal',
     fontWeight: fontWeightRegular,
   },
   subheadingTextBold: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 16,
     fontStyle: 'normal',
     fontWeight: fontWeightBold,
@@ -61,21 +61,21 @@ const typography = theme => ({
    */
   bodyText: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: fontWeightRegular,
   },
   bodyTextSemiBold: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: fontWeightSemiBold,
   },
   bodyTextBold: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: fontWeightBold,
@@ -85,14 +85,14 @@ const typography = theme => ({
    */
   labelText: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: fontWeightRegular,
   },
   labelTextBold: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: fontWeightBold,
@@ -104,14 +104,14 @@ const typography = theme => ({
    */
   captionText: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 12,
     fontStyle: 'normal',
     fontWeight: fontWeightRegular,
   },
   captionTextBold: {
     // fontFamily,
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: 12,
     fontStyle: 'normal',
     fontWeight: fontWeightBold,

@@ -41,8 +41,10 @@ const MainApp = () => {
       value={{
         mode: themeState,
         setMode,
-        active: themeState === 'dark' ? darkTheme : lightTheme,
-        typography: typography(themeState === 'dark' ? darkTheme : lightTheme),
+        colors: themeState === 'dark' ? darkTheme.colors : lightTheme.colors,
+        typography: typography(
+          themeState === 'dark' ? darkTheme.colors : lightTheme.colors,
+        ),
         spacing,
         dimensions,
       }}>

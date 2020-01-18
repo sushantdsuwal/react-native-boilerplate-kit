@@ -1,3 +1,4 @@
 import Text from './Text';
+import Spinner from './Spinner';
 
-export {Text};
+export {Text, Spinner};

@@ -68,6 +68,7 @@ const getTextStyle = (type, bold, theme) => {
   if (bold) {
     style += 'Bold';
   }
+  console.log(JSON.stringify(theme.typography[style]));
   return theme.typography[style];
 };
 
