@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {NAVIGATION_PRODUCT_REPOSITORY_SCREEN} from '../../navigation/routes';
@@ -34,7 +35,7 @@ const HomeScreen = ({navigation}) => {
 
       <Button
         style={{marginVertical: 20}}
-        title="go to feed screen"
+        title="Go to feed screen"
         onPress={() =>
           navigation.navigate(NAVIGATION_PRODUCT_REPOSITORY_SCREEN, {
             data: 'screen props here',

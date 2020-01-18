@@ -31,12 +31,24 @@ const RootStactNavigator = ({navigation, route}) => {
   }
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name={NAVIGATION_HOME_SCREEN} component={HomeScreen} />
       <HomeStack.Screen
+        options={() => ({
+          title: 'Home',
+        })}
+        name={NAVIGATION_HOME_SCREEN}
+        component={HomeScreen}
+      />
+      <HomeStack.Screen
+        options={() => ({
+          title: 'Product List',
+        })}
         name={NAVIGATION_PRODUCT_REPOSITORY_SCREEN}
         component={ProductRepositoryScreen}
       />
       <HomeStack.Screen
+        options={() => ({
+          title: 'Detail',
+        })}
         name={NAVIGATION_PRODUCT_CATALOG_SCREEN}
         component={ProductCatalogScreen}
       />
@@ -48,6 +60,9 @@ const CatagoryStackNavigator = () => {
   return (
     <CatagoryStack.Navigator>
       <CatagoryStack.Screen
+        options={() => ({
+          title: 'Catagory List',
+        })}
         name={NAVIGATION_CATAGORY_SCREEN}
         component={CatagoryScreen}
       />
@@ -59,6 +74,9 @@ const ProfileStackNaivgator = () => {
   return (
     <ProfileStack.Navigator>
       <ProfileStack.Screen
+        options={() => ({
+          title: 'Profile Setting',
+        })}
         name={NAVIGATION_PROFILE_SCREEN}
         component={ProfileScreen}
       />
