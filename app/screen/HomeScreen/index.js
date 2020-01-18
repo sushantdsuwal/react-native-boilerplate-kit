@@ -1,15 +1,30 @@
 import React from 'react';
 import {View, Button, StyleSheet} from 'react-native';
 import {NAVIGATION_PRODUCT_REPOSITORY_SCREEN} from '../../navigation/routes';
-import {Spinner} from '../../components';
-import {Text} from '../../components';
+import {Text, Spinner, Card} from '../../components';
 
 const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text type="heading" bold>
-        Text Heading with bold
-      </Text>
+      <Card style={{marginVertical: 10}}>
+        <Text type="heading" bold>
+          Text Heading with bold
+        </Text>
+        <Text type="subheading" bold>
+          Text Sub Heading bold
+        </Text>
+        <Text type="body" bold>
+          Text Body bold
+        </Text>
+        <Text type="label" bold>
+          Text Label bold
+        </Text>
+        <Text type="caption" bold>
+          Text caption bold
+        </Text>
+      </Card>
+
+      <Text type="heading">Text Heading</Text>
       <Text type="subheading">Text Sub Heading</Text>
       <Text type="body">Text Body</Text>
       <Text type="label">Text Label</Text>

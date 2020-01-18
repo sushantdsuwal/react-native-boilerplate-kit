@@ -5,7 +5,6 @@ const darkTheme = {
     background: 'rgb(1, 1, 1)',
     card: 'rgb(18, 18, 18)',
     text: 'rgb(229, 298,231)',
-    // text: '#fff',
     border: 'rgb(39, 39, 41)',
   },
 };
