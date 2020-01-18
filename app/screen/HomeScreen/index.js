@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Button, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {NAVIGATION_PRODUCT_REPOSITORY_SCREEN} from '../../navigation/routes';
-import {Text, Spinner, Card} from '../../components';
+import {Text, Spinner, Card, Button} from '../../components';
 
 const HomeScreen = ({navigation}) => {
   return (
@@ -33,14 +33,16 @@ const HomeScreen = ({navigation}) => {
       <Spinner />
 
       <Button
+        style={{marginVertical: 20}}
         title="go to feed screen"
         onPress={() =>
           navigation.navigate(NAVIGATION_PRODUCT_REPOSITORY_SCREEN, {
             data: 'screen props here',
           })
         }
+        type="outline"
       />
-      <Text bold>You can Change theme pallate in profile tab</Text>
+      <Text bold>You can Change theme palette in profile tab</Text>
     </View>
   );
 };
