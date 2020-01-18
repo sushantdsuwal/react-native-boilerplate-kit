@@ -1,10 +1,9 @@
-import 'react-native-gesture-handler';
 import React from 'react';
+import {NavigationNativeContainer} from '@react-navigation/native';
 import {StatusBar} from 'react-native';
 import Navigator from './navigation/Navigator';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {enableScreens} from 'react-native-screens';
-import {NavigationNativeContainer} from '@react-navigation/native';
 import {AppearanceProvider, Appearance} from 'react-native-appearance';
 import ManageThemeContext, {defaultMode} from './theme/ManageThemeContext';
 import {

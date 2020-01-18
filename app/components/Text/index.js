@@ -41,37 +41,34 @@ const Text = ({
   const theme = useTheme();
   return (
     <RNText
-      style={StyleSheet.flatten([
-        styles.text(type, bold, theme.typography),
-        style,
-      ])}
+      style={StyleSheet.flatten([styles.text(type, bold, theme), style])}
       {...props}
     />
   );
 };
 
 const getTextStyle = (type, bold, theme) => {
-  let style = {};
+  let style = '';
   switch (type) {
     case HEADING:
-      style = theme.headingText;
+      style = 'headingText';
       break;
     case SUB_HEADING:
-      style = theme.subheadingText;
+      style = 'subheadingText';
       break;
     case LABEL:
-      style = theme.labelText;
+      style = 'labelText';
       break;
     case CAPTION:
-      style = theme.captionText;
+      style = 'captionText';
       break;
     default:
-      style = theme.bodyText;
+      style = 'bodyText';
   }
   if (bold) {
-    style = {...style, fontWeight: '900'};
+    style += 'Bold';
   }
-  return style;
+  return theme.typography[style];
 };
 
 const styles = {
